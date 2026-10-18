@@ -1,0 +1,290 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: black;
+    padding: 5px;
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    color: beige;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logo {
+    font-size: larger;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: yellow;
+}
+
+nav a {
+    text-decoration: none;
+    color: azure;
+}
+
+a:hover {
+    background-color: rgb(131, 120, 141);
+    color: yellow;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    color: azure;
+}
+
+i:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.box {
+    background-color: rgba(0, 0, 0, 0.592);
+    width: 100%;
+    height: calc(100vh - 35px);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.left {
+    width: 220px;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: azure;
+    color: black;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.html {
+    position: relative;
+}
+
+.html-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.html-menu li {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.html-menu li:hover {
+    background-color: rgba(211, 211, 211, 0.951);
+}
+
+.html:hover .html-menu {
+    display: block;
+}
+
+.css {
+    position: relative;
+}
+
+.css-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    padding: 10px;
+    z-index: 10;
+}
+
+.css-menu li {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.css-menu li:hover {
+    background-color: rgba(211, 211, 211, 0.951);
+}
+
+.css:hover .css-menu {
+    display: block;
+}
+
+.links {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.links a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: black;
+}
+
+.center {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.center h1 {
+    margin-top: 40px;
+    padding: 60px;
+}
+
+.center p {
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.392);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: azure;
+}
+
+th,
+td {
+    border: 1px solid #495057;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    width: 115px;
+    font-weight: bold;
+}
+
+.right {
+    width: 250px;
+    flex-shrink: 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: azure;
+    color: black;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rightlink {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.rightlink a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+
+
+
+
+
+.btn {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+
+    .right {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 60px;
+        height: 40px;
+        padding: 5px;
+        background-color:gray;
+        border-radius: 0 8px 8px 0;
+        z-index: 1000;
+    }
+
+    .btn {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 8px;
+        background-color: #292929;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        
+    }
+
+    .right h1 {
+        display: none;
+    }
+
+    .rightlink {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .right:hover {
+        width: 220px;
+        height: 250px;
+        padding: 12px;
+    }
+
+    .right:hover .rightlink {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 1001px) {
+
+    .btn {
+        display: none;
+    }
+
+    .right h1 {
+        display: block;
+    }
+
+    .rightlink {
+        display: flex;
+        flex-direction: column;
+    }
+}
