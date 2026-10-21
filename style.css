@@ -259,13 +259,13 @@ header nav a:hover {
     font-size: 30px;
 }
 
-.social-icons {
+.icons {
     display: flex;
     gap: 18px;
     margin-top: 15px;
 }
 
-.social-icons i {
+.icons i {
     cursor: pointer;
 }
 
